@@ -25,6 +25,7 @@
 #include "gameTypes/TextureColor.h"
 #include "gameData/const_gui_ids.h"
 #include "helpers/converters.h"
+#include <cstdio>
 
 #include "DebugNew.h" // IWYU-pragma: keep
 
@@ -37,7 +38,7 @@ public:
     {
         if(showCoords){
             char coord[32];
-            sprintf(coord, "%u;%u", pt.x, pt.y);
+            std::sprintf(coord, "%u;%u", pt.x, pt.y);
             NormalFont->Draw(displayPt.x, displayPt.y, coord, 0, 0xFFFFFF00);
         }
         std::string data;
